@@ -1,13 +1,14 @@
 import justpy as jp
 import definition
 from webapp import layout
+from webapp import page
 
 
-class Dictionary:
+class Dictionary(page.Page):
     path = "/dictionary"
 
     @classmethod
-    def serve(cls):
+    def serve(cls, req):
         wp = jp.QuasarPage(tailwind=True)
 
         lay = layout.DefaultLayout(a=wp)
